@@ -7,7 +7,13 @@ import (
 )
 
 // HomeHandler is a default handler to serve up
-// a home page.
+// a home page
 func HomeHandler(c buffalo.Context) error {
 	return c.Render(http.StatusOK, r.HTML("index.html"))
+}
+
+// Hello call a page
+// This is a page for unburden
+func Hello(c buffalo.Context) error {
+	return c.Render(http.StatusOK, r.HTML("hello.html"))
 }
